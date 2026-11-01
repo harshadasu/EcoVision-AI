@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoVision AI – Environmental Intelligence Platform</title>
+  <meta name="description" content="AI-powered environmental analysis, document intelligence, and sustainability scoring platform." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="/static/images/logo.png" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════ NAVBAR ═══════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-brand" style="display: flex; align-items: center;">
+    <img src="/static/images/logo.png" alt="EcoVision AI Logo" style="width: 38px; height: 38px; object-fit: contain; border-radius: 10px; margin-right: 10px;" />
+    <span class="nav-title">EcoVision <span class="accent">AI</span></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+    <li><a href="#dashboard" class="nav-link" data-section="dashboard">Dashboard</a></li>
+    <li><a href="#analyse" class="nav-link" data-section="analyse">Analyse</a></li>
+    <li><a href="#search" class="nav-link" data-section="search">Search</a></li>
+    <li><a href="#chat" class="nav-link" data-section="chat">EcoChat</a></li>
+    <li><a href="#upload" class="nav-link" data-section="upload">Upload</a></li>
+  </ul>
+  <button class="nav-cta" onclick="scrollToSection('analyse')">Get Started</button>
+</nav>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="particle-field" id="particles"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      AI-Powered Environmental Intelligence
+    </div>
+    <h1 class="hero-title">
+      Understand Our Planet<br />
+      <span class="gradient-text">Intelligently</span>
+    </h1>
+    <p class="hero-sub">
+      Analyse environmental documents, detect sustainability risks, run semantic searches,
+      and get AI-driven recommendations — all in one powerful platform.
+    </p>
+    <div class="hero-actions">
+      <button class="btn btn-primary" onclick="scrollToSection('analyse')">
+        <span>Start Analysing</span>
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <button class="btn btn-ghost" onclick="scrollToSection('dashboard')">View Dashboard</button>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="hero-stat-num" data-target="1240500">0</span><span>Tonnes CO₂ Tracked</span></div>
+      <div class="hero-stat"><span class="hero-stat-num" data-target="127600">0</span><span>Analyses Run</span></div>
+      <div class="hero-stat"><span class="hero-stat-num" data-target="9812">0</span><span>Active Users</span></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="globe-container">
+      <div class="globe">
+        <div class="globe-ring ring-1"></div>
+        <div class="globe-ring ring-2"></div>
+        <div class="globe-ring ring-3"></div>
+        <div class="globe-core">🌍</div>
+        <div class="globe-pulse"></div>
+      </div>
+      <div class="data-point dp-1"><span class="dp-label">Amazon</span><span class="dp-value danger">-12%</span></div>
+      <div class="data-point dp-2"><span class="dp-label">Arctic Ice</span><span class="dp-value warning">-8%</span></div>
+      <div class="data-point dp-3"><span class="dp-label">Solar Growth</span><span class="dp-value success">+31%</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ DASHBOARD ═══════════════════ -->
+<section class="section" id="dashboard">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">📊 Live Metrics</div>
+      <h2 class="section-title">Environmental Dashboard</h2>
+      <p class="section-sub">Real-time indicators across key ecological dimensions</p>
+    </div>
+
+    <div class="metrics-grid">
+      <div class="metric-card card-deforestation">
+        <div class="metric-icon">🌳</div>
+        <div class="metric-info">
+          <h3>Deforestation Risk</h3>
+          <div class="metric-gauge"><div class="gauge-fill" style="--fill:72%"></div></div>
+          <div class="metric-vals"><span class="val-num danger-text">72 / 100</span><span class="val-label">High Risk</span></div>
+        </div>
+      </div>
+      <div class="metric-card card-ocean">
+        <div class="metric-icon">🌊</div>
+        <div class="metric-info">
+          <h3>Ocean Health Index</h3>
+          <div class="metric-gauge"><div class="gauge-fill warning" style="--fill:41%"></div></div>
+          <div class="metric-vals"><span class="val-num warning-text">41 / 100</span><span class="val-label">Moderate</span></div>
+        </div>
+      </div>
+      <div class="metric-card card-air">
+        <div class="metric-icon">💨</div>
+        <div class="metric-info">
+          <h3>Air Quality Score</h3>
+          <div class="metric-gauge"><div class="gauge-fill success" style="--fill:63%"></div></div>
+          <div class="metric-vals"><span class="val-num success-text">63 / 100</span><span class="val-label">Moderate Good</span></div>
+        </div>
+      </div>
+      <div class="metric-card card-biodiversity">
+        <div class="metric-icon">🦋</div>
+        <div class="metric-info">
+          <h3>Biodiversity Index</h3>
+          <div class="metric-gauge"><div class="gauge-fill danger" style="--fill:31%"></div></div>
+          <div class="metric-vals"><span class="val-num danger-text">31 / 100</span><span class="val-label">Critical</span></div>
+        </div>
+      </div>
+      <div class="metric-card card-energy">
+        <div class="metric-icon">⚡</div>
+        <div class="metric-info">
+          <h3>Renewable Energy</h3>
+          <div class="metric-gauge"><div class="gauge-fill success" style="--fill:30%"></div></div>
+          <div class="metric-vals"><span class="val-num success-text">30%</span><span class="val-label">of Global Mix</span></div>
+        </div>
+      </div>
+      <div class="metric-card card-co2">
+        <div class="metric-icon">🏭</div>
+        <div class="metric-info">
+          <h3>Atmospheric CO₂</h3>
+          <div class="metric-gauge"><div class="gauge-fill danger" style="--fill:84%"></div></div>
+          <div class="metric-vals"><span class="val-num danger-text">424 ppm</span><span class="val-label">Record High</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Threat chart -->
+    <div class="chart-card">
+      <h3>🔥 Top Environmental Threats</h3>
+      <div class="bar-chart">
+        <div class="bar-row"><span class="bar-label">Deforestation</span><div class="bar-track"><div class="bar-fill" style="--w:88%"></div></div><span class="bar-val">88%</span></div>
+        <div class="bar-row"><span class="bar-label">Ocean Plastic</span><div class="bar-track"><div class="bar-fill" style="--w:76%"></div></div><span class="bar-val">76%</span></div>
+        <div class="bar-row"><span class="bar-label">Carbon Emissions</span><div class="bar-track"><div class="bar-fill" style="--w:84%"></div></div><span class="bar-val">84%</span></div>
+        <div class="bar-row"><span class="bar-label">Species Extinction</span><div class="bar-track"><div class="bar-fill" style="--w:69%"></div></div><span class="bar-val">69%</span></div>
+        <div class="bar-row"><span class="bar-label">Ice Cap Melting</span><div class="bar-track"><div class="bar-fill" style="--w:72%"></div></div><span class="bar-val">72%</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ ANALYSE ═══════════════════ -->
+<section class="section section-dark" id="analyse">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">🔬 AI Analysis</div>
+      <h2 class="section-title">Environmental Text Analysis</h2>
+      <p class="section-sub">Paste any text — news, reports, policies — and get instant eco-impact scoring</p>
+    </div>
+
+    <div class="analyse-layout">
+      <div class="analyse-input glass-card">
+        <label class="field-label">Category <span class="optional">(optional)</span></label>
+        <select id="analyseCat" class="eco-select">
+          <option value="general">🌍 Auto-Detect</option>
+          <option value="deforestation">🌳 Deforestation</option>
+          <option value="pollution">🏭 Pollution</option>
+          <option value="wildlife">🦁 Wildlife</option>
+          <option value="ocean">🌊 Ocean</option>
+          <option value="climate">❄️ Climate</option>
+          <option value="energy">⚡ Energy</option>
+          <option value="waste">♻️ Waste</option>
+        </select>
+
+        <label class="field-label" style="margin-top:1.25rem">Text to Analyse</label>
+        <textarea id="analyseText" class="eco-textarea" placeholder="Paste news articles, policy documents, reports... e.g. 'Large-scale deforestation in the Amazon basin has accelerated due to agricultural expansion and illegal logging operations...'" rows="8"></textarea>
+
+        <button class="btn btn-primary btn-full" id="analyseBtn" onclick="runAnalysis()">
+          <span>Analyse Text</span>
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </button>
+      </div>
+
+      <div class="analyse-result glass-card" id="analyseResult" style="display:none">
+        <div class="result-header">
+          <h3>Analysis Result</h3>
+          <div class="result-cat" id="resultCat"></div>
+        </div>
+
+        <div class="score-ring-container">
+          <svg class="score-ring" viewBox="0 0 120 120">
+            <circle class="ring-bg" cx="60" cy="60" r="50" />
+            <circle class="ring-fill" id="ringFill" cx="60" cy="60" r="50" stroke-dasharray="314" stroke-dashoffset="314"/>
+          </svg>
+          <div class="score-center">
+            <span class="score-num" id="scoreNum">0</span>
+            <span class="score-lbl">/ 100</span>
+          </div>
+        </div>
+
+        <p class="result-summary" id="resultSummary"></p>
+
+        <div class="result-section">
+          <h4>💡 Recommendations</h4>
+          <ul class="rec-list" id="recList"></ul>
+        </div>
+
+        <div class="confidence-bar">
+          <span>Confidence</span>
+          <div class="conf-track"><div class="conf-fill" id="confFill"></div></div>
+          <span id="confVal">0%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ SEARCH ═══════════════════ -->
+<section class="section" id="search">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">🔍 Semantic Search</div>
+      <h2 class="section-title">Search Environmental Knowledge</h2>
+      <p class="section-sub">Ask anything — our semantic engine finds the most relevant information</p>
+    </div>
+
+    <div class="search-box glass-card">
+      <div class="search-inner">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchQuery" class="search-input" placeholder="e.g. 'ocean plastic pollution effects on marine life'" />
+        <select id="searchTopK" class="search-topk">
+          <option value="3">Top 3</option>
+          <option value="5" selected>Top 5</option>
+          <option value="10">Top 10</option>
+        </select>
+        <button class="btn btn-primary" onclick="runSearch()">Search</button>
+      </div>
+
+      <div class="quick-searches">
+        <span class="qs-label">Quick searches:</span>
+        <button class="qs-tag" onclick="setSearch('carbon emissions climate change')">Carbon Emissions</button>
+        <button class="qs-tag" onclick="setSearch('deforestation amazon biodiversity')">Amazon Deforestation</button>
+        <button class="qs-tag" onclick="setSearch('renewable energy solar wind')">Renewable Energy</button>
+        <button class="qs-tag" onclick="setSearch('ocean plastic marine wildlife')">Ocean Plastic</button>
+      </div>
+    </div>
+
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════ UPLOAD ═══════════════════ -->
+<section class="section section-dark" id="upload">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">📄 Documents</div>
+      <h2 class="section-title">Upload & Index Documents</h2>
+      <p class="section-sub">PDFs, text files, and images are parsed and added to the semantic knowledge base</p>
+    </div>
+
+    <div class="upload-area glass-card" id="dropZone">
+      <div class="drop-content">
+        <div class="drop-icon">📂</div>
+        <h3>Drag & drop files here</h3>
+        <p>or click to browse — PDF, TXT, JPG, PNG (max 20 MB)</p>
+        <input type="file" id="fileInput" accept=".pdf,.txt,.png,.jpg,.jpeg" style="display:none" onchange="handleFileSelect(event)" />
+        <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">Browse Files</button>
+      </div>
+    </div>
+
+    <div id="uploadResult" class="upload-result" style="display:none"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CHAT ═══════════════════ -->
+<section class="section" id="chat">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">💬 EcoChat</div>
+      <h2 class="section-title">Chat with EcoVision AI</h2>
+      <p class="section-sub">Ask questions about the environment, sustainability, and conservation</p>
+    </div>
+
+    <div class="chat-container glass-card">
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-msg assistant">
+          <div class="msg-avatar">🌿</div>
+          <div class="msg-bubble">
+            <p>Hello! I'm EcoVision AI. Ask me anything about environmental science, sustainability, climate change, biodiversity, or conservation. I'm here to help! 🌍</p>
+          </div>
+        </div>
+      </div>
+      <div class="chat-input-bar">
+        <input type="text" id="chatInput" class="chat-input" placeholder="Ask about climate, forests, oceans..." onkeydown="if(event.key==='Enter') sendChat()" />
+        <button class="btn btn-primary" onclick="sendChat()" id="chatSendBtn">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">🌿 EcoVision AI</div>
+        <p>Empowering environmental intelligence with AI — for a greener tomorrow.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="#analyse">Text Analysis</a></li>
+          <li><a href="#search">Semantic Search</a></li>
+          <li><a href="#chat">EcoChat</a></li>
+          <li><a href="#upload">Document Upload</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>API</h4>
+        <ul>
+          <li><a href="/docs">Swagger Docs</a></li>
+          <li><a href="/redoc">ReDoc</a></li>
+          <li><a href="/api/v1/health">Health Check</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 EcoVision AI. Built to protect the planet. 🌍</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script src="/static/js/app.js"></script>
+</body>
+</html>
